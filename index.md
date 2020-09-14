@@ -308,6 +308,8 @@ SURVEYS - DO NOT EDIT SURVEY LINKS
 {% endcomment %}
 <h2 id="surveys">Surveys</h2>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
+<p>For question 3 "Which of the following workshops are you attending?" please choose
+  "I don't know".</p>
 <p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 
@@ -323,12 +325,7 @@ to match your plans.  You may also want to change 'Day 1' and 'Day
 {% endcomment %}
 <h2 id="schedule">Schedule</h2>
 
-| Start Time  | Topic | Instructor |
-| ---------- | ------ | ---------- |
-| | | |
-| | | |
-| | | |
-| | | |
+{% if site.carpentry == "swc" %} {% include swc/schedule.html %} {% elsif site.carpentry == "dc" %} {% include dc/schedule.html %} {% elsif site.carpentry == "lc" %} {% include lc/schedule.html %} {% endif %}
 
 <hr/>
 
